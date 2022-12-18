@@ -19,10 +19,10 @@ struct node *create_node(int data)
     return new_node;
 }
 
-// Insert a new node in the tree
+// function to insert a new node in the tree
 void insert_node(struct node **root, int data)
 {
-    // if the tree is empty then create a new node as the root node
+    // if the tree is empty, create a new node as the root node
     if (*root == NULL)
     {
         *root = create_node(data);
@@ -36,7 +36,7 @@ void insert_node(struct node **root, int data)
         insert_node(&(*root)->right, data);
 }
 
-// display the tree in in-order of traversal
+// display the tree in in-order traversal
 void display_tree(struct node *root)
 {
     if (root == NULL)
